@@ -42,7 +42,7 @@ class LuaHandler {
         float popNumber() const;
         std::string popString() const;
 
-        void loadTable(const std::string& tableName) const;
+        bool loadTable(const std::string& tableName) const;
         void popTable() const;
 
         ///Pop the top of the stack and return the stack top.

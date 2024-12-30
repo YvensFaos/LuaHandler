@@ -191,11 +191,13 @@ bool LuaHandler::isTopOfStackATable() const {
     return lua_istable(lua, -1);
 }
 
-void LuaHandler::loadTable(const std::string& tableName) const {
+bool LuaHandler::loadTable(const std::string& tableName) const {
     lua_getglobal(lua, tableName.c_str());
     if(!isTopOfStackATable()) {
         printf("%sUnable to read table named: %s.\r\n", LUA_LOG, tableName.c_str());
+        return false;
     }
+    return true;
 }
 
 void LuaHandler::popTable() const {
