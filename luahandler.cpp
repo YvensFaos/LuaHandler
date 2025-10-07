@@ -1,7 +1,5 @@
 #include "luahandler.hpp"
 
-#define LUA_LOG "###LUA_LOG :"
-
 LuaHandler::LuaHandler() {
     this->lua = luaL_newstate();
     luaL_openlibs(lua);

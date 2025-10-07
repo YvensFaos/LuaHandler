@@ -3,6 +3,8 @@
 #include <lua.hpp>
 #include <string>
 
+#define LUA_LOG "###LUA_LOG :"
+
 class LuaHandler {
         lua_State* lua;
     public:
